@@ -1,11 +1,13 @@
 import React from 'react'
 
-function About() {
+function About(props) {
   return (
     <>
-    <h2 className='text-2xl py-3 text-cyan-300'>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, voluptatibus?
-      </h2></>
+      <p>{props.id}</p>
+      <p>{props.title}</p>
+      <p>{props.location}</p>
+      <image>{props.image}</image>
+    </>
   )
 }
 

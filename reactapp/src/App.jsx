@@ -1,14 +1,15 @@
 import React from 'react'
-import Tour from './Practice/Tours'
+import Routing from './Practice/Routing'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+
+
+
+
+
+// import Tour from './Practice/Tours'
 
 
 // import ShopingCard from './Practice/ShopingCard'
-
-
-
-
-
-// import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 
 // import Header from './Components/Header'
@@ -26,9 +27,9 @@ import Tour from './Practice/Tours'
 // import './Practice.css'
 
 
-// import Home from './Pages/Home'
-// import About from './Pages/About'
-// import Shop from './Pages/Shop'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Shop from './Pages/Shop'
 
 
 // import Footer from './Components/Footer'
@@ -38,7 +39,23 @@ function App() {
   return ( 
     <>
 
-    <Tour/>
+
+
+
+     {/* Browser Routing */}
+   <BrowserRouter>
+    <Routing />
+    <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/about' element={<About/>}/>
+    <Route path='/shop' element={<Shop/>}/>
+    </Routes>
+    </BrowserRouter>
+
+
+
+
+    {/* <Tour/> */}
 
 
 
@@ -52,15 +69,6 @@ function App() {
 
 
 
-    {/* Browser Routing */}
-    {/* <BrowserRouter>
-    <Routing />
-    <Routes>
-    <Route path='/' element={<Home/>}/>
-    <Route path='/about' element={<About/>}/>
-    <Route path='/shop' element={<Shop/>}/>
-    </Routes>
-    </BrowserRouter> */}
 
 
 

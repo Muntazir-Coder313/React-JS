@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Header.css'
 import { Link, Links } from 'react-router-dom'
 
 function Routing() {
@@ -26,7 +27,7 @@ function Routing() {
     </Link>
     <ul className='nav'>
       <li className='head'><Link to="/about">About us</Link></li>
-      <li className='head'><Link to="/shop">Admission</Link></li>
+      <li className='head'><Link to="/shop">Tours</Link></li>
       <li className='head'><Link to="/admission">Academics</Link></li>
       <li className='head'><Link to="/admission">Resources</Link></li>
       <li className='head'><Link to="/admission">Life At NPIT</Link></li>
@@ -36,7 +37,7 @@ function Routing() {
 </div>
 
 
-    <div className="container"></div>
+    {/* <div className="container"></div> */}
 
 
 
