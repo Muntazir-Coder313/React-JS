@@ -26,12 +26,11 @@ function Routing() {
     <h2 className='logo'>NEXTPLANNER <br /><hr /> <span className='extra'>INSTITUTE OF TECHNOLOGY</span></h2>
     </Link>
     <ul className='nav'>
-      <li className='head'><Link to="/about">About us</Link></li>
-      <li className='head'><Link to="/shop">Tours</Link></li>
+      <li className='head'><Link to="/about">Product</Link></li>
+      <li className='head'><Link to="/contact">Contact</Link></li>
       <li className='head'><Link to="/admission">Academics</Link></li>
       <li className='head'><Link to="/admission">Resources</Link></li>
       <li className='head'><Link to="/admission">Life At NPIT</Link></li>
-      <li className='head'><Link to="/admission">Contact us</Link></li>
       <li className='head'><Link to="/admission">Apply Now</Link></li>
     </ul>
 </div>
