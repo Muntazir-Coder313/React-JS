@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Header.css'
-import { Link, Links } from 'react-router-dom'
+
+import { Heart,ShoppingCart } from "lucide-react";
+import { Link } from 'react-router-dom'
+
+
+
 
 function Routing() {
+
+
+  const [darkMode, setDarkMode] = useState(false);
+
+const toggleTheme = () => {
+  setDarkMode(!darkMode);
+
+  if (!darkMode) {
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
+};  
+
+
   return (
     <div>
               <div className="header">
@@ -15,8 +35,13 @@ function Routing() {
 
   {/* Auth buttons */}
   <ul className="tag">
+    <li className="list signup">
+    <Heart size={20} color="red" />
+    </li>
     <li className="list login">Login</li>
-    <li className="list signup">Sign Up</li>
+    <li className="list login" onClick={toggleTheme}>
+    {darkMode ? "🌞 Light" : "🌙 Dark"}
+  </li>
   </ul>
 </div>
 
@@ -26,12 +51,12 @@ function Routing() {
     <h2 className='logo'>NEXTPLANNER <br /><hr /> <span className='extra'>INSTITUTE OF TECHNOLOGY</span></h2>
     </Link>
     <ul className='nav'>
-      <li className='head'><Link to="/about">Product</Link></li>
+      <li className='head'><Link to="/about">Expensive</Link></li>
+      <li className='head'><Link to="/product">Product</Link></li>
       <li className='head'><Link to="/contact">Contact</Link></li>
-      <li className='head'><Link to="/admission">Academics</Link></li>
-      <li className='head'><Link to="/admission">Resources</Link></li>
-      <li className='head'><Link to="/admission">Life At NPIT</Link></li>
-      <li className='head'><Link to="/admission">Apply Now</Link></li>
+      <li className='head'><Link to="/#">Academics</Link></li>
+      <li className='head'><Link to="/#">Life At NPIT</Link></li>
+      <li className='head'><Link to="/#"><ShoppingCart color="black" /></Link></li>
     </ul>
 </div>
 
